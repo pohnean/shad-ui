@@ -8,6 +8,7 @@ interface Props extends PrimitiveProps {
   variant?: NonNullable<Parameters<typeof buttonVariants>[0]>['variant']
   size?: NonNullable<Parameters<typeof buttonVariants>[0]>['size']
   as?: string
+  label?: string
   disabled?: boolean
   loading?: boolean
 }
@@ -34,6 +35,6 @@ withDefaults(defineProps<Props>(), {
     <div v-if="loading" class="absolute inset-0 grid place-items-center">
       <Spinner class="h-5 text-white" />
     </div>
-    <slot />
+    <slot>{{ label }}</slot>
   </Primitive>
 </template>
