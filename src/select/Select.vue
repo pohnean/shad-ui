@@ -23,18 +23,20 @@ interface Option {
 
 const props = withDefaults(defineProps<SelectRootProps & {
   options: (OptionGroup | Option)[];
-  placeholder: string;
-  clearable: boolean;
-  disabled: boolean;
+  placeholder?: string;
+  clearable?: boolean;
+  disabled?: boolean;
 }>(), {
   placeholder: 'Select an option',
   clearable: true,
   disabled: false,
 });
 
-const emits = defineEmits<SelectRootEmits>()
+const emits = defineEmits<SelectRootEmits>();
 
-const forwarded = useForwardPropsEmits(props, emits)
+const { options, ...rest } = props;
+
+const forwarded = useForwardPropsEmits(rest, emits)
 </script>
 
 <template>
