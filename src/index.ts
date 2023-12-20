@@ -9,7 +9,5 @@ export { default as SdTextarea } from './textarea/Textarea.vue';
 export { default as SdSpinner } from './spinner/Spinner.vue';
 export { default as SdProgress } from './progress/Progress.vue';
 export { default as SdSwitch } from './switch/Switch.vue';
-import {
-  Dialog as SdDialog,
-  DialogFooter as SdDialogFooter
-} from './dialog/index';
+export { default as SdFormField } from './field/FormField.vue';
+export { default as SdDialog } from './dialog/Dialog.vue';
