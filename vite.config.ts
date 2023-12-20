@@ -22,7 +22,7 @@ export default defineConfig({
       fileName: 'shad-ui',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vee-validate'],
       output: {
         globals: {
           vue: 'Vue',
